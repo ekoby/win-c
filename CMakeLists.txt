@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(win-c)
 
-add_library(libwinc ${SOURCES})
 set(SOURCES "source/getopt.c")
+add_library(libwinc ${SOURCES})
 target_include_directories(libwinc INTERFACE "include")
 
 if(WINC_BUILD_TESTS)
