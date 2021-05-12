@@ -3,7 +3,9 @@ project(win-c)
 
 set(SOURCES "source/getopt.c")
 add_library(libwinc ${SOURCES})
-target_include_directories(libwinc INTERFACE "include")
+target_include_directories(libwinc 
+		INTERFACE "include"
+		PRIVATE include)
 
 if(WINC_BUILD_TESTS)
 	add_executable(testLibwinc test/test.cpp)
